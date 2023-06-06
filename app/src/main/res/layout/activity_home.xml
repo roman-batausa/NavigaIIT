@@ -7,11 +7,24 @@
     android:background="#f5f5f5"
     tools:context=".Home">
 
+<!--    Top Constraint-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/location_btn"
+            app:layout_constraintTop_toTopOf="@id/top_constraint"
+            app:layout_constraintStart_toStartOf="@id/top_constraint"
+            app:layout_constraintBottom_toBottomOf="@id/top_constraint"/>
 
         <ImageButton
             android:layout_width="50dp"
@@ -24,12 +37,50 @@
             app:layout_constraintStart_toStartOf="@id/top_constraint"
             app:layout_constraintEnd_toEndOf="@id/top_constraint"/>
 
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/profile_btn"
+            app:layout_constraintEnd_toEndOf="@id/top_constraint"
+            app:layout_constraintTop_toTopOf="@id/top_constraint"
+            app:layout_constraintBottom_toBottomOf="@id/top_constraint"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+<!--    Bottom Constraint-->
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bot_constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="5dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home_btn"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="@id/bot_constraint"
+            app:layout_constraintEnd_toStartOf="@id/image_btn"
+            app:layout_constraintBottom_toBottomOf="@id/bot_constraint"
+            app:layout_constraintTop_toTopOf="@id/bot_constraint"/>
+
+        <ImageButton
+            android:id="@+id/image_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search_btn"
+            app:layout_constraintStart_toStartOf="@id/bot_constraint"
+            app:layout_constraintEnd_toEndOf="@id/bot_constraint"
+            app:layout_constraintTop_toTopOf="@id/bot_constraint"
+            app:layout_constraintBottom_toBottomOf="@id/bot_constraint"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
