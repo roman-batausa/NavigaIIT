@@ -102,6 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="#800000"
+                android:textSize="20dp"
                 android:text="Login"
                 android:fontFamily="@font/insignia"
                 android:textColor="#fff"
