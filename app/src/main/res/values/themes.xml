@@ -3,11 +3,10 @@
     <style name="Base.Theme.NavigaIIT" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">#f5f5f5</item>
+        <item name="colorPrimary">#F5F5F5</item>
         <item name="colorPrimaryVariant">#800000</item>
-        <item name="android:textColor">#545557</item>
+        <item name="android:textColorPrimary">#545557</item>
         <item name="android:statusBarColor">#800000</item>
-
     </style>
 
     <style name="Theme.NavigaIIT" parent="Base.Theme.NavigaIIT" />

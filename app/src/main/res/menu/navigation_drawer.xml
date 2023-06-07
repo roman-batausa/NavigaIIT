@@ -7,9 +7,9 @@
         android:checkableBehavior="single">
 
         <item
-            android:id="nav_profile"
+            android:id="@+id/nav_profile"
             android:icon="@drawable/baseline_account_circle_24"
-            android:title="Profile"
+            android:title="Profile"/>
 
     </group>
 

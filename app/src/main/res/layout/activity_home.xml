@@ -1,88 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5f5"
+    android:background="@color/off_white"
+    android:id="@+id/drawer_layout"
     tools:context=".Home">
 
-<!--    Top Constraint-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top_constraint"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:background="#f5f5f5">
 
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:scaleType="fitCenter"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/baseline_navigation_24"
-            app:layout_constraintTop_toTopOf="@id/top_constraint"
-            app:layout_constraintStart_toStartOf="@id/top_constraint"
-            app:layout_constraintBottom_toBottomOf="@id/top_constraint"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#800000"
+            android:elevation="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_container"/>
 
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:scaleType="fitCenter"
-            android:src="@drawable/map_logo_square"
-            app:layout_constraintTop_toTopOf="@id/top_constraint"
-            app:layout_constraintBottom_toBottomOf="@id/top_constraint"
-            app:layout_constraintStart_toStartOf="@id/top_constraint"
-            app:layout_constraintEnd_toEndOf="@id/top_constraint"/>
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:scaleType="fitCenter"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/baseline_account_circle_24"
-            app:layout_constraintEnd_toEndOf="@id/top_constraint"
-            app:layout_constraintTop_toTopOf="@id/top_constraint"
-            app:layout_constraintBottom_toBottomOf="@id/top_constraint"/>
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottomAppBar"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#800000"
+                app:fabCradleMargin="10dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bottom_navigation"
+                    android:outlineSpotShadowColor="@android:color/transparent"
+                    app:itemIconSize="30dp"
+                    android:layout_marginEnd="18dp"
+                    app:labelVisibilityMode="unlabeled"
+                    app:menu="@menu/bottom_navigation_menu"
+                    android:background="@android:color/transparent"/>
 
-<!--    Bottom Constraint-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bot_constraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:padding="5dp">
+            </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:scaleType="fitCenter"
-            android:src="@drawable/baseline_home_24"
-            android:layout_marginStart="5dp"
-            app:layout_constraintStart_toStartOf="@id/bot_constraint"
-            app:layout_constraintEnd_toStartOf="@id/image_btn"
-            app:layout_constraintBottom_toBottomOf="@id/bot_constraint"
-            app:layout_constraintTop_toTopOf="@id/bot_constraint"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-        <ImageButton
-            android:id="@+id/image_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="#00000000"
-            android:scaleType="fitCenter"
-            android:src="@drawable/baseline_search_24"
-            app:layout_constraintStart_toStartOf="@id/bot_constraint"
-            app:layout_constraintEnd_toEndOf="@id/bot_constraint"
-            app:layout_constraintTop_toTopOf="@id/bot_constraint"
-            app:layout_constraintBottom_toBottomOf="@id/bot_constraint"/>
+    </RelativeLayout>
 
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_drawer"
+        android:layout_gravity="start"
+        android:background="@color/off_white"
+        app:itemIconTint="@color/iit_yellow"
+        app:itemTextColor="@color/off_white"
+        android:theme="@style/ThemeOverlay.AppCompat.navTheme"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/navigation_drawer"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

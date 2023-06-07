@@ -1,19 +1,16 @@
 package com.example.navigaiit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
-import android.util.Pair;
-import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,15 +44,9 @@ public class MainActivity extends AppCompatActivity {
         logo_name.setAnimation(sloganAnim);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(MainActivity.this, Login.class);
-
-            // For animation
-            Pair[] pairs = new Pair[2];
-            pairs[0] = new Pair<View, String>(logo, "trans_logo_image");
-            pairs[1] = new Pair<View, String>(logo_name, "trans_logoname_text");
-
-            ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
-            startActivity(intent, options.toBundle());
+            Intent intent = new Intent(MainActivity.this, Home.class);
+            startActivity(intent);
+            finish();
 
         }, SPLASH_SCREEN);
 
