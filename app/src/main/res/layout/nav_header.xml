@@ -3,13 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="175dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="15dp"
+    android:padding="10dp"
+    android:background="@color/off_white"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
     
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/baseline_account_circle_24"
+        android:id="@+id/user_pfp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/baseline_account_circle_24_grey"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
@@ -17,7 +19,14 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:text="Guest User"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/user_pfp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

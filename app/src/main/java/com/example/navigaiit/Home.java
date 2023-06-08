@@ -43,23 +43,54 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setBackground(null);
 
+        // BOTTOM NAVIGATION
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int itemId = item.getItemId();
-                //if()
-                // TODO: make if else for the fragments
+
+                if(itemId == R.id.bottom_home) {
+                    openFragment(new HomeFragment());
+                    return true;
+                }
+                else if(itemId == R.id.bottom_search) {
+                    openFragment(new SearchFragment());
+                    return true;
+                }
+                else if(itemId == R.id.bottom_notifications) {
+                    openFragment(new NotificationsFragment());
+                    return true;
+                }
+                else if(itemId == R.id.bottom_mail) {
+                    openFragment(new MailFragment());
+                    return true;
+                }
 
                 return false;
             }
         });
 
+        fragmentManager = getSupportFragmentManager();
+        openFragment(new HomeFragment());
+
     }
 
+    // DRAWER NAVIGATION
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
-        // TODO: create fragments to open
+
+        if(itemId == R.id.nav_profile) {
+            openFragment(new ProfileFragment());
+        }
+        else if(itemId == R.id.nav_bookmarks) {
+            openFragment(new BookmarksFragment());
+        }
+        else if(itemId == R.id.nav_history) {
+            openFragment(new HistoryFragment());
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
 
         return false;
     }

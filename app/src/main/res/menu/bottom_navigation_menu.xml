@@ -12,13 +12,13 @@
         android:icon="@drawable/baseline_search_24"/>
 
     <item
-        android:id="@+id/bottom_notofications"
+        android:id="@+id/bottom_notifications"
         android:title="Notifications"
         android:icon="@drawable/baseline_notifications_24"/>
 
     <item
         android:id="@+id/bottom_mail"
         android:title="Mail"
-        android:icon="@drawable/baseline_mail_outline_24"/>
+        android:icon="@drawable/baseline_mail_24"/>
 
 </menu>
