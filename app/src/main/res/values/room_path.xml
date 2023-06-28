@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="room_path">
+        <item>@drawable/first_floor_101</item>
+        <item>@drawable/first_floor_102</item>
+        <item>@drawable/first_floor_103</item>
+        <item>@drawable/first_floor_104</item>
+        <item>@drawable/first_floor_105</item>
+        <item>@drawable/first_floor_106</item>
+        <item>@drawable/first_floor_107</item>
+        <item>@drawable/first_floor_108</item>
+        <item>@drawable/first_floor_109</item>
+        <item>@drawable/first_floor_110</item>
+        <item>@drawable/first_floor_111</item>
+        <item>@drawable/first_floor_112</item>
+        <item>@drawable/first_floor_113</item>
+        <item>@drawable/first_floor_114</item>
+        <item>@drawable/first_floor_115</item>
+        <item>@drawable/first_floor_116</item>
+        <item>@drawable/first_floor_117</item>
+        <item>@drawable/first_floor_118</item>
+        <item>@drawable/first_floor_119</item>
+        <item>@drawable/first_floor_120</item>
+        <item>@drawable/first_floor_121</item>
+        <item>@drawable/first_floor_122</item>
+        <item>@drawable/first_floor_124</item>
+        <item>@drawable/first_floor_126</item>
+        <item>@drawable/first_floor_create_lab</item>
+        <item>@drawable/first_floor_elevator</item>
+        <item>@drawable/first_floor_female_cr</item>
+        <item>@drawable/first_floor_male_cr</item>
+
+    </integer-array>
+
+</resources>

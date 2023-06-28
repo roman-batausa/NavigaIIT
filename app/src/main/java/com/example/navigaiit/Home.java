@@ -1,5 +1,6 @@
 package com.example.navigaiit;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -24,10 +25,16 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     FragmentManager fragmentManager;
     Toolbar toolbar;
 
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+//        spinner = findViewById(R.id.home_spinner);
+
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,6 +49,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setBackground(null);
+
+
+
+
+
 
         // BOTTOM NAVIGATION
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

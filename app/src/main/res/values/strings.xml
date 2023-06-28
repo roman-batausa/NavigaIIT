@@ -4,4 +4,61 @@
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <array name="buildings">
+        <item>ADMIN</item>
+        <item>BA</item>
+        <item>CASS</item>
+        <item>CBAA</item>
+        <item>CED</item>
+        <item>CDO</item>
+        <item>CLINIC</item>
+        <item>COE</item>
+        <item>CON</item>
+        <item>CSM</item>
+        <item>DORM</item>
+        <item>GYM</item>
+        <item>IDS</item>
+        <item>IPDM</item>
+        <item>KASAMA</item>
+        <item>KTTO</item>
+        <item>MAIN LIBRARY</item>
+        <item>MICEL</item>
+        <item>PRISM</item>
+        <item>REGISTRAR</item>
+        <item>SCS</item>
+        <item>SET LAB</item>
+        <item>SID</item>
+    </array>
+
+    <array name="first_floor">
+        <item>RM 101</item>
+        <item>RM 102</item>
+        <item>RM 103</item>
+        <item>RM 104</item>
+        <item>RM 105</item>
+        <item>RM 106</item>
+        <item>RM 107</item>
+        <item>RM 108</item>
+        <item>RM 109</item>
+        <item>RM 110</item>
+        <item>RM 111</item>
+        <item>RM 112</item>
+        <item>RM 113</item>
+        <item>RM 114</item>
+        <item>RM 115</item>
+        <item>RM 116</item>
+        <item>RM 117</item>
+        <item>RM 118</item>
+        <item>RM 119</item>
+        <item>RM 120</item>
+        <item>RM 121</item>
+        <item>RM 122</item>
+        <item>RM 124</item>
+        <item>RM 126</item>
+        <item>CREATE LAB</item>
+        <item>ELEVATOR</item>
+        <item>FEMALE CR</item>
+        <item>MALE CR</item>
+    </array>
 </resources>
