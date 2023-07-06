@@ -12,9 +12,9 @@
             android:title="Profile"/>
 
         <item
-            android:id="@+id/nav_bookmarks"
-            android:icon="@drawable/baseline_bookmark_24"
-            android:title="Bookmarks"/>
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/baseline_mail_24"
+            android:title="Mail"/>
 
         <item
             android:id="@+id/nav_history"
@@ -22,5 +22,39 @@
             android:title="History"/>
 
     </group>
+
+    <item
+        android:title="">
+
+        <menu>
+            <group
+                android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_settings"
+                android:title="Settings"/>
+
+            <item
+                android:id="@+id/nav_settings_and_privacy"
+                android:title="Settings and privacy"
+                android:icon="@drawable/baseline_settings_24"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/nav_login"
+                android:title="Login"
+                android:icon="@drawable/baseline_login_24"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/nav_help"
+                android:title="Help"
+                android:icon="@drawable/baseline_help_outline_24"
+                android:visible="false"/>
+
+            </group>
+        </menu>
+
+        </item>
 
 </menu>

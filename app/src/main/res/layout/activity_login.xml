@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
-    tools:context=".Login">
+    android:background="@color/white_na_grey_gamay"
+    android:id="@+id/login_layout"
+    tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/login_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/maroon"
+        app:title="@string/app_name"
+        app:titleTextColor="#00000000"
+        android:elevation="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/logo_constraint"
@@ -16,7 +32,7 @@
         android:padding="20dp">
 
         <ImageView
-            android:id="@+id/logo_image"
+            android:id="@+id/login_logo_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="-40dp"
@@ -27,73 +43,89 @@
             app:layout_constraintTop_toTopOf="@id/logo_constraint" />
 
         <TextView
-            android:id="@+id/logoname_text_login"
+            android:id="@+id/login_logoname_text"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="-50dp"
             android:fontFamily="@font/insignia"
             android:shadowColor="#C17454"
-            android:shadowDx="10"
-            android:shadowDy="10"
+            android:shadowDx="5"
+            android:shadowDy="5"
             android:shadowRadius="1"
             android:text="NavigaIIT"
             android:textAlignment="center"
-            android:textSize="55dp"
+            android:textSize="55sp"
             android:transitionName="trans_logoname_text"
-            app:layout_constraintTop_toBottomOf="@id/logo_image" />
+            app:layout_constraintTop_toBottomOf="@id/login_logo_image" />
 
         <TextView
-            android:id="@+id/welcome_text"
+            android:id="@+id/login_welcome_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Your route towards IIT"
-            android:textSize="20dp"
+            android:transitionName="trans_welcome_text"
+            android:textSize="20sp"
             android:lineSpacingExtra="10dp"
             android:textAlignment="center"
             android:fontFamily="@font/insignia"
             android:textColor="#545557"
             android:layout_marginTop="-10dp"
-            app:layout_constraintTop_toBottomOf="@id/logoname_text_login"/>
+            app:layout_constraintTop_toBottomOf="@id/login_logoname_text"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/login_constraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            app:layout_constraintTop_toBottomOf="@id/welcome_text">
+            app:layout_constraintTop_toBottomOf="@id/login_welcome_text">
 
             <!--        Username text-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username"
+                android:id="@+id/username_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@id/login_constraint">
+                android:hint="Username"
+                android:textColorHint="@color/black"
+                android:transitionName="trans_username_textfield"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toTopOf="@id/login_constraint"
+                app:layout_constraintStart_toStartOf="@id/login_constraint"
+                app:layout_constraintEnd_toEndOf="@id/login_constraint">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/username_inputText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/off_white"
                     android:fontFamily="@font/insignia"
-                    android:hint="Username"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--        Password text-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password"
+                android:id="@+id/password_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:passwordToggleEnabled="true"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@id/username">
+                android:hint="Password"
+                android:textColorHint="@color/black"
+                android:transitionName="trans_password_textfield"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@id/username_layout"
+                app:layout_constraintStart_toStartOf="@id/login_constraint"
+                app:layout_constraintEnd_toEndOf="@id/login_constraint">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/password_inputText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/off_white"
                     android:fontFamily="@font/insignia"
                     android:inputType="textPassword"
-                    android:hint="Password"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,11 +134,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:backgroundTint="#800000"
+                android:layout_marginTop="2dp"
                 android:textSize="20dp"
                 android:text="Login"
                 android:fontFamily="@font/insignia"
-                android:textColor="#fff"
-                app:layout_constraintTop_toBottomOf="@id/password"/>
+                android:textColor="@color/off_white"
+                android:transitionName="trans_button"
+                app:layout_constraintTop_toBottomOf="@id/password_layout"/>
 
             <Button
                 android:id="@+id/dont_have_an_account_btn"
@@ -117,28 +151,15 @@
                 android:textAllCaps="false"
                 android:gravity="center"
                 android:fontFamily="@font/insignia"
-                android:textSize="14dp"
-                android:textColor="#3A3B3C"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:transitionName="trans_acc_button"
                 android:padding="0dp"
                 android:elevation="0dp"
                 android:layout_marginTop="5dp"
                 app:layout_constraintTop_toBottomOf="@id/login_btn"
                 app:layout_constraintStart_toStartOf="@id/login_constraint"
                 app:layout_constraintEnd_toEndOf="@id/login_constraint"/>
-
-
-            <!--            <Button-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="#00000000"-->
-            <!--                android:text="register"-->
-            <!--                android:fontFamily="@font/insignia"-->
-            <!--                android:textColor="#3A3B3C"-->
-            <!--                android:textSize="15dp"-->
-            <!--                android:gravity="center"-->
-            <!--                app:layout_constraintStart_toEndOf="@id/dont_have_an_account"-->
-            <!--                app:layout_constraintTop_toBottomOf="@id/login"/>-->
-
 
             <Button
                 android:id="@+id/forgot_your_password"
@@ -148,8 +169,8 @@
                 android:background="#00000000"
                 android:fontFamily="@font/insignia"
                 android:textAllCaps="false"
-                android:textSize="14dp"
-                android:textColor="#3A3B3C"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
                 android:gravity="center"
                 android:padding="0dp"
                 android:elevation="0dp"

@@ -1,151 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
-    tools:context=".Register">
+    android:background="@color/white_na_grey_gamay"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/register_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/maroon"
+        app:title="@string/app_name"
+        app:titleTextColor="#00000000"
+        android:elevation="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/middle_constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/logo_image_signup"
+            android:id="@+id/register_logo_image"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_marginTop="-40dp"
             android:src="@drawable/map_logo"
             android:transitionName="trans_logo_image"
-            app:layout_constraintTop_toTopOf="@id/middle_constraint"
+            app:layout_constraintEnd_toEndOf="@id/middle_constraint"
             app:layout_constraintStart_toStartOf="@id/middle_constraint"
-            app:layout_constraintEnd_toEndOf="@id/middle_constraint"/>
+            app:layout_constraintTop_toTopOf="@id/middle_constraint" />
 
         <TextView
-            android:id="@+id/logoname_text_register"
+            android:id="@+id/register_logoname_text"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="-50dp"
             android:fontFamily="@font/insignia"
             android:shadowColor="#C17454"
-            android:shadowDx="10"
-            android:shadowDy="10"
+            android:shadowDx="5"
+            android:shadowDy="5"
             android:shadowRadius="1"
             android:text="NavigaIIT"
             android:textAlignment="center"
             android:textSize="45dp"
             android:transitionName="trans_logoname_text"
-            app:layout_constraintTop_toBottomOf="@id/logo_image_signup" />
+            app:layout_constraintTop_toBottomOf="@id/register_logo_image" />
+
+        <TextView
+            android:id="@+id/register_welcome_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25dp"
+            android:fontFamily="@font/insignia"
+            android:lineSpacingExtra="10dp"
+            android:text="Your route towards IIT"
+            android:textAlignment="center"
+            android:textColor="#545557"
+            android:textSize="18sp"
+            android:transitionName="trans_welcome_text"
+            app:layout_constraintTop_toBottomOf="@id/register_logoname_text" />
 
         <!--        Sign Up Constraint-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/signup_constraint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/logoname_text_register"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/register_logoname_text">
 
-            <!--            Full Name-->
+            <!--            Username-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_fullname"
+                android:id="@+id/register_username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="Username"
+                android:textColorHint="@color/black"
+                android:transitionName="trans_username_textfield"
+                app:counterTextColor="@color/black"
                 app:layout_constraintTop_toTopOf="@id/signup_constraint">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/off_white"
                     android:fontFamily="@font/insignia"
-                    android:hint="Full name"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            Full Name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_fullname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full name"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/register_username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/off_white"
+                    android:fontFamily="@font/insignia"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--            Email-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_email"
+                android:id="@+id/register_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@id/signup_fullname">
+                android:hint="Email"
+                android:textColorHint="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/register_fullname">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/off_white"
                     android:fontFamily="@font/insignia"
-                    android:hint="Email"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <!--            Password-->
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_password"
+                android:id="@+id/register_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:passwordToggleEnabled="true"
-                app:layout_constraintTop_toBottomOf="@id/signup_email">
+                android:hint="Password"
+                android:textColorHint="@color/black"
+                android:transitionName="trans_password_textfield"
+                app:layout_constraintTop_toBottomOf="@id/register_email"
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/off_white"
                     android:fontFamily="@font/insignia"
                     android:inputType="textPassword"
-                    android:hint="Password"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--            Username-->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signup_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@id/signup_password">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/insignia"
-                    android:hint="Username"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/register_btn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:textSize="20dp"
+                android:layout_marginTop="2dp"
                 android:backgroundTint="#800000"
-                app:layout_constraintTop_toBottomOf="@id/signup_username"
-                android:text="Register"/>
+                android:text="Register"
+                android:textColor="@color/off_white"
+                android:textSize="20dp"
+                android:transitionName="trans_button"
+                app:layout_constraintTop_toBottomOf="@id/register_password"
+                tools:layout_editor_absoluteX="0dp" />
 
             <Button
                 android:id="@+id/already_have_an_account_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:text="already have an account?"
-                android:background="#00000000"
-                android:textAllCaps="false"
-                android:gravity="center"
-                android:fontFamily="@font/insignia"
-                android:textSize="14dp"
-                android:textColor="#3A3B3C"
-                android:padding="0dp"
-                android:elevation="0dp"
                 android:layout_marginTop="5dp"
-                app:layout_constraintTop_toBottomOf="@id/register_btn"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:fontFamily="@font/insignia"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="already have an account?"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:transitionName="trans_acc_button"
+                app:layout_constraintEnd_toEndOf="@id/signup_constraint"
                 app:layout_constraintStart_toStartOf="@id/signup_constraint"
-                app:layout_constraintEnd_toEndOf="@id/signup_constraint"/>
+                app:layout_constraintTop_toBottomOf="@id/register_btn" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

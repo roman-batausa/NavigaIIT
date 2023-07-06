@@ -31,34 +31,223 @@
         <item>SID</item>
     </array>
 
-    <array name="first_floor">
-        <item>RM 101</item>
-        <item>RM 102</item>
-        <item>RM 103</item>
-        <item>RM 104</item>
-        <item>RM 105</item>
-        <item>RM 106</item>
-        <item>RM 107</item>
-        <item>RM 108</item>
-        <item>RM 109</item>
-        <item>RM 110</item>
-        <item>RM 111</item>
-        <item>RM 112</item>
-        <item>RM 113</item>
-        <item>RM 114</item>
-        <item>RM 115</item>
-        <item>RM 116</item>
-        <item>RM 117</item>
-        <item>RM 118</item>
-        <item>RM 119</item>
-        <item>RM 120</item>
-        <item>RM 121</item>
-        <item>RM 122</item>
-        <item>RM 124</item>
-        <item>RM 126</item>
-        <item>CREATE LAB</item>
+    <array name="first_floor_rooms">
+        <item>"101"</item> <!-- ME Instrumentation Lab, ME Workshop -->
+        <item>"102"</item> <!-- Fluid Machineries Lab, CNC Machining Lab -->
+        <item>"103"</item> <!-- Fluid Machineries Lab, CNC Machining Lab -->
+        <item>"104"</item> <!-- Fluid Machineries Lab, CNC Machining Lab -->
+        <item>"105"</item> <!-- ME Instrumentation Lab, ME Workshop -->
+        <item>"106"</item> <!-- Fluid Machineries Lab, CNC Machining Lab -->
+        <item>"107"</item>
+        <item>"108"</item> <!-- CE Surveying Lab, Materials Testing Lab -->
+        <item>"109"</item> <!-- GIS Resource Center -->
+        <item>"110"</item> <!-- CE Surveying Lab, Materials Testing Lab -->
+        <item>"111"</item> <!-- Stockholm, Extractive/Mineral Processing Lab -->
+        <item>"112"</item> <!-- CE Soil Mechanics Lab -->
+        <item>"113"</item>
+        <item>"114"</item> <!-- Cer.E. Lab 1, XRD/XRF Analysis Lab -->
+        <item>"115"</item>
+        <item>"116"</item> <!-- Cer.E. Lab 1, XRD/XRF Analysis Lab -->
+        <item>"117"</item>
+        <item>"118"</item> <!-- Cer.E. Lab 1, XRD/XRF Analysis Lab -->
+        <item>"119"</item>
+        <item>"120"</item> <!-- EE Energy Conversion Lab -->
+        <item>"121"</item>
+        <item>"122"</item> <!-- FABLAB -->
+        <item>"124"</item> <!-- FABLAB -->
+        <item>"126"</item> <!-- Fluid Science Lab -->
+        <item>"CREATE LAB"</item>
+        <item>"ELEVATOR"</item>
+        <item>"FEMALE CR"</item>
+        <item>"MALE CR"</item>
+
+    </array>
+    <array name="first_floor_rooms_descriptions">
+        <item>"ME Instrumentation Lab&#44; ME Workshop"</item>
+        <item>"Fluid Machineries Lab&#44; CNC Machining Lab"</item>
+        <item>"Fluid Machineries Lab&#44; CNC Machining Lab"</item>
+        <item>"Fluid Machineries Lab&#44; CNC Machining Lab"</item>
+        <item>"ME Instrumentation Lab&#44; ME Workshop"</item>
+        <item>"Fluid Machineries Lab&#44; CNC Machining Lab"</item>
+        <item>""</item>
+        <item>"CE Surveying Lab&#44; Materials Testing Lab"</item>
+        <item>"GIS Resource Center"</item>
+        <item>CE Surveying Lab&#44; Materials Testing Lab</item>
+        <item>"Stockholm&#44; Extractive&#47;Mineral Processing Lab"</item>
+        <item>"CE Soil Mechanics Lab"</item>
+        <item>""</item>
+        <item>"Cer&#46;E&#46; Lab 1&#44; XRD&#47;XRF Analysis Lab"</item>
+        <item>""</item>
+        <item>"Cer&#46;E&#46; Lab 1&#44; XRD&#47;XRF Analysis Lab"</item>
+        <item>""</item>
+        <item>"Cer&#46;E&#46; Lab 1&#44; XRD&#47;XRF Analysis Lab"</item>
+        <item>""</item>
+        <item>"EE Energy Conversion Lab"</item>
+        <item>"0"</item>
+        <item>"FABLAB"</item>
+        <item>"FABLAB"</item>
+        <item>"Fluid Science Lab"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+    </array>
+
+    <array name="second_floor_rooms">
+        <item>"201"</item> <!-- Dept. of Electrical/Electronics/Computer Eng'g -->
+        <item>"202"</item>
+        <item>"203"</item>
+        <item>"204"</item> <!-- Circuit Lab, Lab Equipment &#38; Maintenance -->
+        <item>"205"</item> <!-- EE Computing Lab -->
+        <item>"206"</item> <!-- Circuit Lab, Lab Equipment &#38; Maintenance -->
+        <item>"207"</item>
+        <item>"208"</item>
+        <item>"209"</item>
+        <item>"210"</item>
+        <item>"211"</item>
+        <item>"212"</item> <!-- General Computing Lab -->
+        <item>"213"</item>
+        <item>"214"</item>
+        <item>"222"</item> <!-- Conference Room -->
+        <item>"224"</item>
+        <item>"226"</item> <!-- Dean's Office -->
+        <item>"ELEVATOR"</item>
+        <item>"FEMALE CR"</item>
+        <item>"MALE CR"</item>
+    </array>
+    <array name="second_floor_room_descriptions">
+        <item>"Dept&#46; of Electrical&#47;Electronics&#47;Computer Engineering"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>"Circuit Lab&#44; Lab Equipment &#38; Maintenance"</item>
+        <item>"EE Computing Lab"</item>
+        <item>"Circuit Lab&#44; Lab Equipment &#38; Maintenance"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>"General Computing Lab"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>"Conference Room"</item>
+        <item>""</item>
+        <item>"Dean&#39;s Office"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+
+    </array>
+
+    <array name="third_floor_rooms">
+        <item>"301"</item> <!-- Graduate Lounge/Graduate Room -->
+        <item>"302"</item>
+        <item>"303"</item> <!-- ME Computing and Rapid Prototyping Lab -->
+        <item>"304"</item>
+        <item>"305"</item>
+        <item>"306"</item>
+        <item>"307"</item>
+        <item>"309"</item>
+        <item>"310"</item>
+        <item>"311"</item>
+        <item>"312"</item>
+        <item>"313"</item> <!-- Metals Preparation Room/Chemical Analysis Lab/Instrumentation Room, Dark room -->
+        <item>"314"</item>
+        <item>"315"</item> <!-- Metals Preparation Room/Chemical Analysis Lab/Instrumentation Room, Dark room -->
+        <item>"316"</item>
+        <item>"317"</item> <!-- Electrical, Electronics, Computer Eng'g Office -->
+        <item>"318"</item>
+        <item>"319"</item> <!-- Electrical, Electronics, Computer Eng'g Office -->
+        <item>"321"</item>
+        <item>"322"</item> <!-- Student Organizations' Office -->
+        <item>"323"</item>
+        <item>"324"</item> <!-- Student Organizations' Office -->
+        <item>"326"</item> <!-- Dept. of Ceramics/Metallurgical/Mining Eng'g -->
+        <item>"328"</item>
+        <item>AMPHITHEATER</item>
         <item>ELEVATOR</item>
         <item>FEMALE CR</item>
         <item>MALE CR</item>
+
     </array>
+    <array name="third_floor_room_descriptions">
+        <item>"Graduate Lounge&#47;Graduate Room"</item>
+        <item>""</item>
+        <item>"ME Computing and Rapid Prototyping Lab"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>"Metals Preparation Room&#47;Chemical Analysis Lab&#47;Instrumentation Room&#44; Dark room"</item>
+        <item>""</item>
+        <item>"Metals Preparation Room&#47;Chemical Analysis Lab&#47;Instrumentation Room&#44; Dark room"</item>
+        <item>""</item>
+        <item>"Electrical&#44; Electronics&#44; Computer Engineering Office"</item>
+        <item>""</item>
+        <item>"Electrical&#44; Electronics&#44; Computer Engineering Office"</item>
+        <item>""</item>
+        <item>"Student Organizations&#39; Office"</item>
+        <item>""</item>
+        <item>"Student Organizations&#39; Office"</item>
+        <item>"Dept&#46; of Ceramics&#47;Metallurgical&#47;Mining Engineering"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+
+    </array>
+
+    <array name="fourth_floor_rooms">
+        <item>"421"</item>
+        <item>"422"</item> <!-- Engineering, Computing &#38; Technology Library -->
+        <item>"424"</item>
+        <item>"ELEVATOR"</item>
+        <item>"FEMALE CR"</item>
+        <item>"MALE CR"</item>
+        <item>"PWD CR"</item>
+
+    </array>
+    <array name="fourth_floor_rooms_descriptions">
+        <item>""</item>
+        <item>"Engineering&#44; Computing &#38; Technology Library"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+
+    </array>
+
+    <array name="fifth_floor_rooms">
+        <item>"521"</item>
+        <item>"522"</item> <!-- Robotics, instrumentation &#38; Control Engineering Lab -->
+        <item>"524"</item> <!-- Dept. of Civil Engineering -->
+        <item>"525"</item>
+        <item>"526"</item> <!-- Dept. of Mechanical Engineering &#38; Engineering Sciences -->
+        <item>"527"</item>
+        <item>"ELEVATOR"</item>
+        <item>"FEMALE CR"</item>
+        <item>"MALE CR"</item>
+        <item>"PWD CR"</item>
+
+    </array>
+    <array name="fifth_floor_rooms_descriptions">
+        <item>""</item>
+        <item>"Robotics&#44; instrumentation &#38; Control Engineering Lab"</item>
+        <item>"Dept&#46; of Civil Engineering"</item>
+        <item>""</item>
+        <item>"Dept&#46; of Mechanical Engineering &#38; Engineering Sciences"</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+        <item>""</item>
+
+    </array>
+
 </resources>

@@ -1,6 +1,7 @@
 package com.example.navigaiit;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,25 +21,33 @@ public class HomeFragment extends Fragment {
     Bundle bundle;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_home, container, false);
-
+    public void onResume() {
+        super.onResume();
         buildings = getResources().getStringArray(R.array.buildings);
-        autoCompleteTextView = view.findViewById(R.id.buildings_autoCompleteTextView);
-        bundle = new Bundle();
-
         ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), R.layout.dropdown_item, buildings);
         autoCompleteTextView.setAdapter(adapter);
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("home", "log test");
                 bundle.putString("key",buildings[i]);
                 openFragment(new BuildingsFragment());
             }
         });
+    }
+
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        autoCompleteTextView = view.findViewById(R.id.buildings_autoCompleteTextView);
+        bundle = new Bundle();
+
 
         return view;
     }
@@ -51,9 +60,6 @@ public class HomeFragment extends Fragment {
                 .replace(R.id.home_fragment, fragment,"findThisFragment")
                 .addToBackStack(null)
                 .commit();
-    }
-    public String getBuilding_name() {
-        return building_name;
     }
     
 }

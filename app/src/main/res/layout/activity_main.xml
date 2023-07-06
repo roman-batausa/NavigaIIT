@@ -9,10 +9,9 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/logo_image"
+        android:id="@+id/login_logo_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:transitionName="trans_logo_image"
         android:layout_marginStart="80dp"
         android:layout_marginTop="-180dp"
         android:layout_marginEnd="-20dp"
@@ -39,14 +38,13 @@
         android:layout_height="154dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="90dp"
-        android:transitionName="trans_logoname_text"
         android:fontFamily="@font/insignia"
         android:shadowColor="#C17454"
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="1"
         android:text="NavigaIIT"
-        android:textSize="65dp"
+        android:textSize="65sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.176"

@@ -7,18 +7,21 @@
     android:layout_height="match_parent"
     android:background="@color/off_white"
     android:id="@+id/drawer_layout"
-    tools:context=".Home">
+    tools:context=".HomeActivity"
+    tools:openDrawer="start">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f5f5f5">
+        android:background="@color/off_white">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/home_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#800000"
+            android:background="@color/maroon"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/iit_yellow"
             android:elevation="5dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -37,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/bottomAppBar"
                 android:layout_gravity="bottom"
-                android:backgroundTint="#800000"
+                android:backgroundTint="@color/maroon"
                 app:fabCradleMargin="10dp">
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -59,14 +62,17 @@
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:id="@+id/navigation_drawer"
         android:layout_gravity="start"
-        android:background="@color/maroon"
+        android:background="#801E1E"
         app:itemIconTint="@color/iit_yellow"
         app:itemIconSize="30dp"
+        app:itemVerticalPadding="5dp"
+        app:itemIconPadding="10dp"
         app:itemTextColor="@color/off_white"
+        app:itemTextAppearance="@style/NavigationTextAppearance"
         android:theme="@style/ThemeOverlay.AppCompat.navTheme"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/navigation_drawer"/>

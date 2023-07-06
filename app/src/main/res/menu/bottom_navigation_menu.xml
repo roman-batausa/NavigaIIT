@@ -17,8 +17,8 @@
         android:icon="@drawable/baseline_notifications_24"/>
 
     <item
-        android:id="@+id/bottom_mail"
-        android:title="Mail"
-        android:icon="@drawable/baseline_mail_24"/>
+        android:id="@+id/bottom_bookmarks"
+        android:title="Bookmarks"
+        android:icon="@drawable/baseline_bookmark_24"/>
 
 </menu>

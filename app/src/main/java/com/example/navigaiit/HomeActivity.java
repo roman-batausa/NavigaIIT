@@ -1,7 +1,8 @@
 package com.example.navigaiit;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -18,16 +19,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 
-public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
+    NavigationView navigationView;
     FragmentManager fragmentManager;
     Toolbar toolbar;
 
 
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,25 +37,22 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 //        spinner = findViewById(R.id.home_spinner);
 
-
-        toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.home_toolbar);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.baseline_account_circle_35);
 
-        NavigationView navigationView = findViewById(R.id.navigation_drawer);
+        navigationView = findViewById(R.id.navigation_drawer);
         navigationView.setNavigationItemSelectedListener(this);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setBackground(null);
-
-
-
-
-
 
         // BOTTOM NAVIGATION
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -73,8 +72,8 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                     openFragment(new NotificationsFragment());
                     return true;
                 }
-                else if(itemId == R.id.bottom_mail) {
-                    openFragment(new MailFragment());
+                else if(itemId == R.id.bottom_bookmarks) {
+                    openFragment(new BookmarksFragment());
                     return true;
                 }
 
@@ -90,16 +89,45 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     // DRAWER NAVIGATION
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
 
+        int itemId = item.getItemId();
+        NavigationView nv = (NavigationView) findViewById(R.id.navigation_drawer);
+        Menu menu = nv.getMenu();
         if(itemId == R.id.nav_profile) {
+            menu.findItem(R.id.nav_settings_and_privacy).setVisible(false);
+            menu.findItem(R.id.nav_login).setVisible(false);
+            menu.findItem(R.id.nav_help).setVisible(false);
             openFragment(new ProfileFragment());
         }
-        else if(itemId == R.id.nav_bookmarks) {
-            openFragment(new BookmarksFragment());
+        else if(itemId == R.id.nav_mail) {
+            menu.findItem(R.id.nav_settings_and_privacy).setVisible(false);
+            menu.findItem(R.id.nav_login).setVisible(false);
+            menu.findItem(R.id.nav_help).setVisible(false);
+            openFragment(new MailFragment());
         }
         else if(itemId == R.id.nav_history) {
+            menu.findItem(R.id.nav_settings_and_privacy).setVisible(false);
+            menu.findItem(R.id.nav_login).setVisible(false);
+            menu.findItem(R.id.nav_help).setVisible(false);
             openFragment(new HistoryFragment());
+        }
+        else if(itemId == R.id.nav_settings) {
+            boolean b = !menu.findItem(R.id.nav_settings_and_privacy).isVisible();
+            // setting submenus visible state
+            menu.findItem(R.id.nav_settings_and_privacy).setVisible(b);
+            menu.findItem(R.id.nav_login).setVisible(b);
+            menu.findItem(R.id.nav_help).setVisible(b);
+            return true;
+        }
+        else if(itemId == R.id.nav_settings_and_privacy) {
+
+        }
+        else if(itemId == R.id.nav_login) {
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
+        }
+        else if(itemId == R.id.nav_help) {
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

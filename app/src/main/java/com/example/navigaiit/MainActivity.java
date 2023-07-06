@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         sloganAnim = AnimationUtils.loadAnimation(this,R.anim.slogan_animation);
 
         // Hooks
-        logo = findViewById((R.id.logo_image));
+        logo = findViewById((R.id.login_logo_image));
         slogan = findViewById((R.id.slogan_image));
         logo_name = findViewById((R.id.logoname_text));
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         logo_name.setAnimation(sloganAnim);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(MainActivity.this, Home.class);
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
 

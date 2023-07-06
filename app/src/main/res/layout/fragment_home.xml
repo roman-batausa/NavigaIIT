@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
+    android:background="@color/white_na_grey_gamay"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_fragment"
     tools:context=".HomeFragment">
@@ -13,8 +13,8 @@
         android:id="@+id/map1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/first_floor_101"
-        android:layout_marginTop="-250dp"
+        android:src="@drawable/campus_map"
+        android:layout_marginTop="-100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,21 +22,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/buildings_textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/campusmap_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="200dp"
+        android:layout_marginTop="80dp"
+        android:shadowColor="@color/white_na_grey_gamay"
+        android:shadowRadius="5"
+        android:text="Campus Map"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/room_textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="430dp"
         android:background="@color/maroon"
+        android:paddingHorizontal="4dp"
         android:textColorHint="@color/black"
         app:boxBackgroundColor="@color/off_white"
         app:boxBackgroundMode="outline"
-        android:paddingHorizontal="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -44,12 +57,15 @@
             android:id="@+id/buildings_autoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:inputType="none"
             android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/off_white"
+            android:dropDownSelector="@color/maroon"
+            android:inputType="none"
             android:text="Select Building"
             android:textAlignment="center"
-            android:textSize="14dp"/>
+            android:textSize="14dp"
+            android:textStyle="bold" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -11,7 +11,7 @@
         android:id="@+id/user_pfp"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/baseline_account_circle_24_grey"
+        android:src="@drawable/baseline_account_circle_75_grey"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
