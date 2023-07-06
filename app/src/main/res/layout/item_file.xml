@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="10dp"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel"
+        android:padding="12dp"
+        android:background="@color/off_white">
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="COE"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/txt10"
+            android:layout_width="20sp"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="25sp"
+            android:layout_marginTop="-7dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/txt1"/>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Second Floor"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/txt10"/>
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room number"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt2" />
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room number"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt3" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
