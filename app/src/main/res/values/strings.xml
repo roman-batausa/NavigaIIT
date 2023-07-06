@@ -105,11 +105,11 @@
         <item>"210"</item>
         <item>"211"</item>
         <item>"212"</item> <!-- General Computing Lab -->
-        <item>"213"</item>
+        <item>"213"</item> <!-- Dept. of Civil Engineering -->
         <item>"214"</item>
         <item>"222"</item> <!-- Conference Room -->
-        <item>"224"</item>
-        <item>"226"</item> <!-- Dean's Office -->
+        <item>"224"</item> <!-- Dean's Office -->
+        <item>"226"</item> <!-- Assistant Dean's Office -->
         <item>"ELEVATOR"</item>
         <item>"FEMALE CR"</item>
         <item>"MALE CR"</item>
@@ -127,11 +127,11 @@
         <item>""</item>
         <item>""</item>
         <item>"General Computing Lab"</item>
-        <item>""</item>
+        <item>"Dept&#46; of Civil Engineering"</item>
         <item>""</item>
         <item>"Conference Room"</item>
-        <item>""</item>
         <item>"Dean&#39;s Office"</item>
+        <item>"Assistant Dean's Office"</item>
         <item>""</item>
         <item>""</item>
         <item>""</item>
@@ -157,10 +157,10 @@
         <item>"317"</item> <!-- Electrical, Electronics, Computer Eng'g Office -->
         <item>"318"</item>
         <item>"319"</item> <!-- Electrical, Electronics, Computer Eng'g Office -->
-        <item>"321"</item>
+        <item>"321"</item> <!-- Civil Service Office -->
         <item>"322"</item> <!-- Student Organizations' Office -->
-        <item>"323"</item>
-        <item>"324"</item> <!-- Student Organizations' Office -->
+        <item>"323"</item> <!-- DOST Office -->
+        <item>"324"</item> <!-- Department of Materials and Resources Engineering and Technology -->
         <item>"326"</item> <!-- Dept. of Ceramics/Metallurgical/Mining Eng'g -->
         <item>"328"</item>
         <item>AMPHITHEATER</item>
@@ -191,7 +191,7 @@
         <item>""</item>
         <item>"Student Organizations&#39; Office"</item>
         <item>""</item>
-        <item>"Student Organizations&#39; Office"</item>
+        <item>"Department of Materials and Resources Engineering and Technology"</item>
         <item>"Dept&#46; of Ceramics&#47;Metallurgical&#47;Mining Engineering"</item>
         <item>""</item>
         <item>""</item>
@@ -225,7 +225,7 @@
     <array name="fifth_floor_rooms">
         <item>"521"</item>
         <item>"522"</item> <!-- Robotics, instrumentation &#38; Control Engineering Lab -->
-        <item>"524"</item> <!-- Dept. of Civil Engineering -->
+        <item>"524"</item>
         <item>"525"</item>
         <item>"526"</item> <!-- Dept. of Mechanical Engineering &#38; Engineering Sciences -->
         <item>"527"</item>
@@ -238,7 +238,7 @@
     <array name="fifth_floor_rooms_descriptions">
         <item>""</item>
         <item>"Robotics&#44; instrumentation &#38; Control Engineering Lab"</item>
-        <item>"Dept&#46; of Civil Engineering"</item>
+        <item>""</item>
         <item>""</item>
         <item>"Dept&#46; of Mechanical Engineering &#38; Engineering Sciences"</item>
         <item>""</item>
