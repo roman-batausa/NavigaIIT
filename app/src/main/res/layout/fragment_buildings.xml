@@ -13,8 +13,8 @@
         android:id="@+id/floorImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/first_floor_no_path"
         android:layout_marginTop="-200dp"
+        android:src="@drawable/first_floor_no_path"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,15 +43,14 @@
         android:layout_width="185dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="430dp"
         android:background="@color/maroon"
         android:paddingHorizontal="4dp"
         android:textColorHint="@color/black"
         app:boxBackgroundColor="@color/off_white"
+        android:layout_marginBottom="125dp"
         app:boxBackgroundMode="outline"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
         <AutoCompleteTextView
             android:id="@+id/room_autoCompleteTextView"
@@ -81,9 +80,9 @@
         android:textColorHint="@color/black"
         app:boxBackgroundColor="@color/off_white"
         app:boxBackgroundMode="outline"
+        android:layout_marginBottom="125dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <AutoCompleteTextView
             android:id="@+id/floor_autoCompleteTextView"
@@ -112,9 +111,10 @@
         android:textStyle="bold"
         android:shadowColor="@color/white_na_grey_gamay"
         android:shadowRadius="5"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="260dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
         android:id="@+id/room_descriptions_textView"
         android:layout_width="match_parent"
@@ -127,8 +127,10 @@
         android:textColor="@color/black"
         android:shadowColor="@color/white_na_grey_gamay"
         android:shadowRadius="5"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginBottom="235dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_btn"

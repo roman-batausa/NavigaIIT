@@ -46,7 +46,7 @@
         android:backgroundTint="@color/off_white"
         android:layout_weight="1"
         android:inputType="none"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="150dp"
         android:text="Room"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -54,12 +54,10 @@
         android:layout_marginStart="10dp"
         android:textColor="@color/maroon"
         android:paddingTop="5dp"
-        android:layout_marginTop="401dp"
         android:layout_marginEnd="190dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/searched_textView_room"
@@ -88,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="401dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="150dp"
         android:layout_weight="1"
         android:backgroundTint="@color/off_white"
         android:inputType="none"
@@ -104,8 +102,7 @@
         android:layout_marginEnd="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/searched_textView_floor"
@@ -135,15 +132,16 @@
         android:text="Room descriptions: "
         android:layout_marginTop="410dp"
         android:padding="10dp"
+        android:layout_marginBottom="260dp"
         android:textSize="16sp"
         android:lineSpacingExtra="5dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:shadowColor="@color/white_na_grey_gamay"
         android:shadowRadius="5"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
         android:id="@+id/room_descriptions2_textView"
         android:layout_width="match_parent"
@@ -156,9 +154,10 @@
         android:textColor="@color/black"
         android:shadowColor="@color/white_na_grey_gamay"
         android:shadowRadius="5"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="235dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/note_top2"
