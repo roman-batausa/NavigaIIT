@@ -128,79 +128,80 @@ public class BookmarksFragment extends Fragment {
             public void onItemClicked(int position) {
                 bundle = new Bundle();
                 BookmarkModel bookmarkModel = adapter.getItemAtPosition(position);
-
-                int q = Arrays.asList(all_rooms).indexOf(bookmarkModel.getRoom());
-                int z = Arrays.asList(room_floor).indexOf(bookmarkModel.getFloor());
-
-                String a = all_rooms[q];
-                String b = room_floor[z];
-
-                int index = -1;
-
-                for(int i = 0; i < all_rooms.length; i++) {
-                    if(all_rooms[i] == a && room_floor[i] == b) {
-                        index = i;
-                        break;
-                    }
-                }
-
-                // HOLY HARD CODED YAWAA
-                if(index == -1) {
-                    if(z == 28 && q == 25) { // second floor elevator
-                        index = 45;
-                    }
-                    else if(z == 28 && q == 26) { // second floor female cr
-                        index = 46;
-                    }
-                    else if(z == 28 && q == 27) { // second floor male cr
-                        index = 47;
-                    }
-                    else if(z == 48 && q == 25) { // third floor elevator
-                        index = 73;
-                    }
-                    else if(z == 48 && q == 26) { // third floor female cr
-                        index = 74;
-                    }
-                    else if(z == 48 && q == 27) { // third floor male cr
-                        index = 75;
-                    }
-                    else if(z == 76 && q == 25) { // fourth floor elevator
-                        index = 79;
-                    }
-                    else if(z == 76 && q == 26) { // fourth floor female cr
-                        index = 80;
-                    }
-                    else if(z == 76 && q == 27) { // fourth floor male cr
-                        index = 81;
-                    }
-                    else if(z == 76 && q == 82) { // fourth floor pwd cr
-                        index = 82;
-                    }
-                    else if(z == 83 && q == 25) { // fifth floor elevator
-                        index = 89;
-                    }
-                    else if(z == 83 && q == 26) { // fifth floor female cr
-                        index = 90;
-                    }
-                    else if(z == 83 && q == 27) { // fifth floor male cr
-                        index = 91;
-                    }
-                    else if(z == 83 && q == 82) { // fifth floor male cr
-                        index = 92;
-                    }
-                }
-
-                bundle.putString("notes_top", "Notes: ");
-                bundle.putString("notes", bookmarkModel.getNotes());
-                bundle.putInt("path", index);
-                bundle.putString("room", bookmarkModel.getRoom());
-                bundle.putString("building", bookmarkModel.getBuilding());
-                //Toast.makeText(requireContext(), ""+index+", "+all_rooms[q]+", "+a+", "+room_floor[z]+", "+b+", "+q+", "+z+"", Toast.LENGTH_SHORT).show();
                 try {
+                    int q = Arrays.asList(all_rooms).indexOf(bookmarkModel.getRoom());
+                    int z = Arrays.asList(room_floor).indexOf(bookmarkModel.getFloor());
+
+                    String a = all_rooms[q];
+                    String b = room_floor[z];
+
+                    int index = -1;
+
+                    for(int i = 0; i < all_rooms.length; i++) {
+                        if(all_rooms[i] == a && room_floor[i] == b) {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    // HOLY HARD CODED YAWAA
+                    if(index == -1) {
+                        if(z == 28 && q == 25) { // second floor elevator
+                            index = 45;
+                        }
+                        else if(z == 28 && q == 26) { // second floor female cr
+                            index = 46;
+                        }
+                        else if(z == 28 && q == 27) { // second floor male cr
+                            index = 47;
+                        }
+                        else if(z == 48 && q == 25) { // third floor elevator
+                            index = 73;
+                        }
+                        else if(z == 48 && q == 26) { // third floor female cr
+                            index = 74;
+                        }
+                        else if(z == 48 && q == 27) { // third floor male cr
+                            index = 75;
+                        }
+                        else if(z == 76 && q == 25) { // fourth floor elevator
+                            index = 79;
+                        }
+                        else if(z == 76 && q == 26) { // fourth floor female cr
+                            index = 80;
+                        }
+                        else if(z == 76 && q == 27) { // fourth floor male cr
+                            index = 81;
+                        }
+                        else if(z == 76 && q == 82) { // fourth floor pwd cr
+                            index = 82;
+                        }
+                        else if(z == 83 && q == 25) { // fifth floor elevator
+                            index = 89;
+                        }
+                        else if(z == 83 && q == 26) { // fifth floor female cr
+                            index = 90;
+                        }
+                        else if(z == 83 && q == 27) { // fifth floor male cr
+                            index = 91;
+                        }
+                        else if(z == 83 && q == 82) { // fifth floor male cr
+                            index = 92;
+                        }
+                    }
+
+
+                    bundle.putString("notes_top", "Notes: ");
+                    bundle.putString("notes", bookmarkModel.getNotes());
+                    bundle.putInt("path", index);
+                    bundle.putString("room", bookmarkModel.getRoom());
+                    bundle.putString("building", bookmarkModel.getBuilding());
+                    //Toast.makeText(requireContext(), ""+index+", "+all_rooms[q]+", "+a+", "+room_floor[z]+", "+b+", "+q+", "+z+"", Toast.LENGTH_SHORT).show();
                     openFragment(new SearchedFragment(), bundle);
                     fab_btn.setVisibility(View.INVISIBLE);
                 }catch (Exception e) {
-                    Toast.makeText(requireContext(), "Bookmark error. Make sure the room, floor, and building are set accordingly", Toast.LENGTH_LONG).show();
+                    Toast.makeText(requireContext(), "Error: Make sure the room, floor, and building are set accordingly", Toast.LENGTH_LONG).show();
+                    e.getCause();
                 }
             }
 
