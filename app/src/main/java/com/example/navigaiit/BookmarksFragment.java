@@ -81,9 +81,9 @@ public class BookmarksFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 bundle = new Bundle();
-                bundle.putString("building", "");
-                bundle.putString("room", "");
-                bundle.putString("floor", "---");
+                bundle.putString("building", "select building");
+                bundle.putString("room", "select room");
+                bundle.putString("floor", "First floor");
                 openFragment(new CreateBookmarkFragment(), bundle);
                 fab_btn.setVisibility(View.INVISIBLE);
             }
@@ -191,6 +191,7 @@ public class BookmarksFragment extends Fragment {
                     }
 
 
+                    bundle.putBoolean("check", false);
                     bundle.putString("notes_top", "Notes: ");
                     bundle.putString("notes", bookmarkModel.getNotes());
                     bundle.putInt("path", index);

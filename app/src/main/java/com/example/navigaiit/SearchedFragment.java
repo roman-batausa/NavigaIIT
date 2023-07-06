@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 
@@ -26,12 +28,15 @@ public class SearchedFragment extends Fragment {
     TypedArray first_floor_room_path, second_floor_room_path, third_floor_room_path, fourth_floor_room_path, fifth_floor_room_path, floor_plan;
     ArrayList<BookmarkModel> bookmarkModelArrayList;
     BookmarkAdapter adapter;
+    FloatingActionButton fab_bt3;
+    Bundle bundle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_searched, container, false);
 
+        fab_bt3 = view.findViewById(R.id.fab_bt3);
         searched_image = view.findViewById(R.id.searchedImage);
         room_text = view.findViewById(R.id.searched_textView_room);
         floor_text = view.findViewById((R.id.searched_textView_floor));
@@ -134,8 +139,35 @@ public class SearchedFragment extends Fragment {
             floor_text.setText("First floor");
         }
 
+        if(getArguments().getBoolean("check") == true) {
+            fab_bt3.setVisibility(View.VISIBLE);
+        }
+        fab_bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle = new Bundle();
+
+                bundle.putString("building", String.valueOf(building.getText()));
+                bundle.putString("floor", String.valueOf(floor_text.getText()));
+                bundle.putString("room", String.valueOf(room_text.getText()));
+
+                openFragment(new CreateBookmarkFragment(),bundle);
+                fab_bt3.setVisibility(View.INVISIBLE);
+            }
+        });
+
 
         return view;
+    }
+
+    private void openFragment(Fragment fragment, Bundle bundle) {
+        fragment.setArguments(bundle);
+        getActivity()
+                .getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.searched_fragment, fragment,"findThisFragment")
+                .addToBackStack(null)
+                .commit();
     }
 
 }

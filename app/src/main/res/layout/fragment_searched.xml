@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SearchedFragment"
+    android:id="@+id/searched_fragment"
     android:background="@color/white_na_grey_gamay">
 
     <com.ortiz.touchview.TouchImageView
@@ -189,5 +190,18 @@
         android:shadowRadius="5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_bt3"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/iit_yellow"
+        android:src="@drawable/baseline_bookmark_add_40"
+        app:fabSize="normal"
+        android:layout_marginBottom="67dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

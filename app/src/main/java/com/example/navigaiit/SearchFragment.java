@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 public class SearchFragment extends Fragment implements RoomAdapter.SelectedRoom{
 
+    View view;
     SearchView searchView;
     RecyclerView recyclerView;
     String[] first_floor_rooms, second_floor_rooms, third_floor_rooms, fourth_floor_rooms, fifth_floor_rooms;
@@ -26,11 +27,12 @@ public class SearchFragment extends Fragment implements RoomAdapter.SelectedRoom
     ArrayList<SearchModel> searchList;
     Bundle bundle;
     int al, bl, cl ,dl, el, total;
+    boolean check;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_search, container, false);
+        view = inflater.inflate(R.layout.fragment_search, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -138,6 +140,7 @@ public class SearchFragment extends Fragment implements RoomAdapter.SelectedRoom
             }
         }
 
+        bundle.putBoolean("check", true);
         bundle.putInt("path", index);
         bundle.putString("room", searchModel.getRoom());
         bundle.putString("building", searchModel.getBuilding());
