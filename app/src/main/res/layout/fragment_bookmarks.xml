@@ -30,4 +30,18 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="58dp"/>
 
+    <TextView
+        android:id="@+id/bookmark_blank_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:shadowColor="@color/white_na_grey_gamay"
+        android:shadowRadius="5"
+        android:text="Bookmark is blank"
+        android:textColor="@color/grey"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
 </RelativeLayout>

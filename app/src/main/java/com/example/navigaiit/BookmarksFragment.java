@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,8 @@ import java.util.Arrays;
 
 public class BookmarksFragment extends Fragment {
 
+
+    View view;
     RecyclerView recyclerView;
     BookmarkAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
@@ -26,11 +29,14 @@ public class BookmarksFragment extends Fragment {
     String[] all_rooms, room_floor, building;
     String[] first_floor_rooms, second_floor_rooms, third_floor_rooms, fourth_floor_rooms, fifth_floor_rooms;
     int al, bl, cl, dl, el, total;
+    TextView bookmark_blank_tv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_bookmarks, container, false);
+        view = inflater.inflate(R.layout.fragment_bookmarks, container, false);
+
+        bookmark_blank_tv = view.findViewById(R.id.bookmark_blank_tv);
 
         // add String array
         first_floor_rooms = getResources().getStringArray(R.array.first_floor_rooms);
@@ -103,6 +109,9 @@ public class BookmarksFragment extends Fragment {
         mdatabaseHelper.deleteBookmark(bm);
         bookmarkModelArrayList.remove(position);
         adapter.notifyItemRemoved(position);
+        if(adapter.getItemCount() == 0) {
+            bookmark_blank_tv.setVisibility(View.VISIBLE);
+        }
         Toast.makeText(requireContext(), "Bookmark deleted", Toast.LENGTH_SHORT).show();
 
     }
@@ -121,6 +130,10 @@ public class BookmarksFragment extends Fragment {
 
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
+
+        if(adapter.getItemCount() == 0) {
+            bookmark_blank_tv.setVisibility(View.VISIBLE);
+        }
 
         adapter.setOnItemClickListener(new BookmarkAdapter.onItemClickListener() {
 
