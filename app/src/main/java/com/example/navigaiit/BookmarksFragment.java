@@ -109,7 +109,7 @@ public class BookmarksFragment extends Fragment {
         mdatabaseHelper.deleteBookmark(bm);
         bookmarkModelArrayList.remove(position);
         adapter.notifyItemRemoved(position);
-        if(adapter.getItemCount() == 0) {
+        if(adapter.getItemCount() <= 0) {
             bookmark_blank_tv.setVisibility(View.VISIBLE);
         }
         Toast.makeText(requireContext(), "Bookmark deleted", Toast.LENGTH_SHORT).show();
@@ -131,7 +131,7 @@ public class BookmarksFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
-        if(adapter.getItemCount() == 0) {
+        if(adapter.getItemCount() <= 0) {
             bookmark_blank_tv.setVisibility(View.VISIBLE);
         }
 

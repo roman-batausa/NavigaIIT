@@ -59,7 +59,7 @@
             android:layout_below="@id/bm_room"
             android:text="notes"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/delete_bookmark_img"
