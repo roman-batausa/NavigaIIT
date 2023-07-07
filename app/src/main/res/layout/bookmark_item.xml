@@ -54,12 +54,14 @@
 
         <TextView
             android:id="@+id/bm_notes"
-            android:layout_width="330dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/bm_room"
             android:text="notes"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_toStartOf="@id/delete_bookmark_img"
+            android:layout_alignStart="@id/bm_room"/>
 
         <ImageView
             android:id="@+id/delete_bookmark_img"
