@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".SearchedFragment"
     android:id="@+id/searched_fragment"
-    android:background="@color/white_na_grey_gamay">
+    android:background="@color/white_na_grey_gamay"
+    android:layout_marginTop="48dp"
+    android:layout_marginBottom="48dp">
 
     <com.ortiz.touchview.TouchImageView
         android:id="@+id/searchedImage"
@@ -32,7 +34,7 @@
         android:textStyle="bold"
         android:shadowColor="@color/white_na_grey_gamay"
         android:shadowRadius="5"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -46,7 +48,7 @@
         android:backgroundTint="@color/off_white"
         android:layout_weight="1"
         android:inputType="none"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="105dp"
         android:text="Room"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -86,7 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="401dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="105dp"
         android:layout_weight="1"
         android:backgroundTint="@color/off_white"
         android:inputType="none"
@@ -163,7 +165,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="80dp"
         android:padding="10dp"
         android:textSize="16sp"
         android:lineSpacingExtra="5dp"
@@ -198,7 +200,7 @@
         android:backgroundTint="@color/iit_yellow"
         android:src="@drawable/baseline_bookmark_add_40"
         app:fabSize="normal"
-        android:layout_marginBottom="67dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
