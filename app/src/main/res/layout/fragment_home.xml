@@ -7,9 +7,7 @@
     android:background="@color/white_na_grey_gamay"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/home_fragment"
-    tools:context=".HomeFragment"
-    android:layout_marginTop="48dp"
-    android:layout_marginBottom="48dp">
+    tools:context=".HomeFragment">
 
     <com.ortiz.touchview.TouchImageView
         android:id="@+id/map1"
@@ -28,7 +26,7 @@
         android:id="@+id/campusmap_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:shadowColor="@color/white_na_grey_gamay"
         android:shadowRadius="5"
         android:text="Campus Map"
@@ -53,7 +51,7 @@
         app:boxBackgroundMode="outline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="75dp">
+        android:layout_marginBottom="125dp">
 
         <AutoCompleteTextView
             android:id="@+id/buildings_autoCompleteTextView"
