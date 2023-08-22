@@ -30,27 +30,35 @@
             <group
                 android:checkableBehavior="single">
 
-            <item
-                android:id="@+id/nav_settings"
-                android:title="Settings"/>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/baseline_settings_24"
+                    android:title="Settings"/>
 
-            <item
-                android:id="@+id/nav_settings_and_privacy"
-                android:title="Settings and privacy"
-                android:icon="@drawable/baseline_settings_24"
-                android:visible="false"/>
+                <item
+                    android:id="@+id/nav_settings_and_privacy"
+                    android:title="Settings and privacy"
+                    android:icon="@drawable/baseline_privacy_tip_24"
+                    android:visible="false"/>
 
-            <item
-                android:id="@+id/nav_login"
-                android:title="Login"
-                android:icon="@drawable/baseline_login_24"
-                android:visible="false"/>
+                <item
+                    android:id="@+id/nav_display"
+                    android:title="Display"
+                    android:icon="@drawable/baseline_display_settings_24"
+                    android:visible="false"/>
 
-            <item
-                android:id="@+id/nav_help"
-                android:title="Help"
-                android:icon="@drawable/baseline_help_outline_24"
-                android:visible="false"/>
+                <item
+                    android:id="@+id/nav_login"
+                    android:title="Login"
+                    android:icon="@drawable/baseline_login_24"
+                    android:visible="false"/>
+
+                <item
+                    android:id="@+id/nav_help"
+                    android:title="Help"
+                    android:icon="@drawable/baseline_help_outline_24"
+                    android:visible="false"/>
+
 
             </group>
         </menu>

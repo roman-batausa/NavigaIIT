@@ -18,6 +18,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_FLOOR = "FLOOR";
     public static final String COLUMN_ROOM = "ROOM";
     public static final String COLUMN_NOTES = "NOTES";
+    public static final String USER_PATH_CHECK = "USER_PATH_CHECK";
+
 
 
     public DatabaseHelper(@Nullable Context context) {
@@ -32,6 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String createTableStatement = "CREATE TABLE " + USER_BOOKMARK_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_BUILDING + " TEXT, " + COLUMN_FLOOR + " TEXT, " + COLUMN_ROOM + " TEXT, " + COLUMN_NOTES + " TEXT)";
 
         db.execSQL(createTableStatement);
+
     }
 
     @Override

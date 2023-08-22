@@ -37,6 +37,9 @@ public class BookmarksFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_bookmarks, container, false);
 
         bookmark_blank_tv = view.findViewById(R.id.bookmark_blank_tv);
+        fab_btn = view.findViewById(R.id.fab_btn);
+
+        fab_btn.setVisibility(View.VISIBLE);
 
         // add String array
         first_floor_rooms = getResources().getStringArray(R.array.first_floor_rooms);
@@ -78,7 +81,7 @@ public class BookmarksFragment extends Fragment {
             }
         }
 
-        fab_btn = view.findViewById(R.id.fab_btn);
+
         recyclerView = view.findViewById(R.id.recyclerView2);
 
         createBookmark();

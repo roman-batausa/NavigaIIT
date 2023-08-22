@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<!--    first floor-->
+<!--    WITH PATH -->
     <integer-array name="first_floor_room_path">
         <item>@drawable/first_floor_101</item>
         <item>@drawable/first_floor_102</item>
@@ -31,7 +31,6 @@
         <item>@drawable/first_floor_elevator</item>
         <item>@drawable/first_floor_female_cr</item>
         <item>@drawable/first_floor_male_cr</item>
-
     </integer-array>
 
     <integer-array name="second_floor_room_path">
@@ -55,7 +54,6 @@
         <item>@drawable/second_floor_elevator</item>
         <item>@drawable/second_floor_female_cr</item>
         <item>@drawable/second_floor_male_cr</item>
-
     </integer-array>
 
     <integer-array name="third_floor_path">
@@ -87,7 +85,6 @@
         <item>@drawable/third_floor_elevator</item>
         <item>@drawable/third_floor_female_cr</item>
         <item>@drawable/third_floor_male_cr</item>
-
     </integer-array>
 
     <integer-array name="fourth_floor_path">
@@ -98,7 +95,6 @@
         <item>@drawable/fourth_floor_female_cr</item>
         <item>@drawable/fourth_floor_male_cr</item>
         <item>@drawable/fourth_floor_pwd_cr</item>
-
     </integer-array>
 
     <integer-array name="fifth_floor_path">
@@ -112,7 +108,6 @@
         <item>@drawable/fifth_floor_female_cr</item>
         <item>@drawable/fifth_floor_male_cr</item>
         <item>@drawable/fifth_floor_pwd_cr</item>
-
     </integer-array>
 
     <array name="floor_number">
@@ -131,6 +126,115 @@
         <item>@drawable/fourth_floor_no_path</item>
         <item>@drawable/fifth_floor_no_path</item>
 
+    </integer-array>
+
+<!--    no path-->
+    <integer-array name="first_floor_room_no_path">
+        <item>@drawable/first_floor_101_no_path</item>
+        <item>@drawable/first_floor_102_no_path</item>
+        <item>@drawable/first_floor_103_no_path</item>
+        <item>@drawable/first_floor_104_no_path</item>
+        <item>@drawable/first_floor_105_no_path</item>
+        <item>@drawable/first_floor_106_no_path</item>
+        <item>@drawable/first_floor_107_no_path</item>
+        <item>@drawable/first_floor_108_no_path</item>
+        <item>@drawable/first_floor_109_no_path</item>
+        <item>@drawable/first_floor_110_no_path</item>
+        <item>@drawable/first_floor_111_no_path</item>
+        <item>@drawable/first_floor_112_no_path</item>
+        <item>@drawable/first_floor_113_no_path</item>
+        <item>@drawable/first_floor_114_no_path</item>
+        <item>@drawable/first_floor_115_no_path</item>
+        <item>@drawable/first_floor_116_no_path</item>
+        <item>@drawable/first_floor_117_no_path</item>
+        <item>@drawable/first_floor_118_no_path</item>
+        <item>@drawable/first_floor_119_no_path</item>
+        <item>@drawable/first_floor_120_no_path</item>
+        <item>@drawable/first_floor_121_no_path</item>
+        <item>@drawable/first_floor_122_no_path</item>
+        <item>@drawable/first_floor_124_no_path</item>
+        <item>@drawable/first_floor_126_no_path</item>
+        <item>@drawable/first_floor_create_lab_no_path</item>
+        <item>@drawable/first_floor_elevator_no_path</item>
+        <item>@drawable/first_floor_female_cr_no_path</item>
+        <item>@drawable/first_floor_male_cr_no_path</item>
+    </integer-array>
+
+    <integer-array name="second_floor_room_no_path">
+        <item>@drawable/second_floor_201_no_path</item>
+        <item>@drawable/second_floor_202_no_path</item>
+        <item>@drawable/second_floor_203_no_path</item>
+        <item>@drawable/second_floor_204_no_path</item>
+        <item>@drawable/second_floor_205_no_path</item>
+        <item>@drawable/second_floor_206_no_path</item>
+        <item>@drawable/second_floor_207_no_path</item>
+        <item>@drawable/second_floor_208_no_path</item>
+        <item>@drawable/second_floor_209_no_path</item>
+        <item>@drawable/second_floor_210_no_path</item>
+        <item>@drawable/second_floor_211_no_path</item>
+        <item>@drawable/second_floor_212_no_path</item>
+        <item>@drawable/second_floor_213_no_path</item>
+        <item>@drawable/second_floor_214_no_path</item>
+        <item>@drawable/second_floor_222_no_path</item>
+        <item>@drawable/second_floor_224_no_path</item>
+        <item>@drawable/second_floor_226_no_path</item>
+        <item>@drawable/second_floor_elevator_no_path</item>
+        <item>@drawable/second_floor_female_cr_no_path</item>
+        <item>@drawable/second_floor_male_cr_no_path</item>
+    </integer-array>
+
+    <integer-array name="third_floor_no_path">
+        <item>@drawable/third_floor_301_no_path</item>
+        <item>@drawable/third_floor_302_no_path</item>
+        <item>@drawable/third_floor_303_no_path</item>
+        <item>@drawable/third_floor_304_no_path</item>
+        <item>@drawable/third_floor_305_no_path</item>
+        <item>@drawable/third_floor_306_no_path</item>
+        <item>@drawable/third_floor_307_no_path</item>
+        <item>@drawable/third_floor_309_no_path</item>
+        <item>@drawable/third_floor_310_no_path</item>
+        <item>@drawable/third_floor_311_no_path</item>
+        <item>@drawable/third_floor_312_no_path</item>
+        <item>@drawable/third_floor_313_no_path</item>
+        <item>@drawable/third_floor_314_no_path</item>
+        <item>@drawable/third_floor_315_no_path</item>
+        <item>@drawable/third_floor_316_no_path</item>
+        <item>@drawable/third_floor_317_no_path</item>
+        <item>@drawable/third_floor_318_no_path</item>
+        <item>@drawable/third_floor_319_no_path</item>
+        <item>@drawable/third_floor_321_no_path</item>
+        <item>@drawable/third_floor_322_no_path</item>
+        <item>@drawable/third_floor_323_no_path</item>
+        <item>@drawable/third_floor_324_no_path</item>
+        <item>@drawable/third_floor_326_no_path</item>
+        <item>@drawable/third_floor_328_no_path</item>
+        <item>@drawable/third_floor_amphitheater_no_path</item>
+        <item>@drawable/third_floor_elevator_no_path</item>
+        <item>@drawable/third_floor_female_cr_no_path</item>
+        <item>@drawable/third_floor_male_cr_no_path</item>
+    </integer-array>
+
+    <integer-array name="fourth_floor_no_path">
+        <item>@drawable/fourth_floor_421_no_path</item>
+        <item>@drawable/fourth_floor_422_no_path</item>
+        <item>@drawable/fourth_floor_424_no_path</item>
+        <item>@drawable/fourth_floor_elevator_no_path</item>
+        <item>@drawable/fourth_floor_female_cr_no_path</item>
+        <item>@drawable/fourth_floor_male_cr_no_path</item>
+        <item>@drawable/fourth_floor_pwd_cr_no_path</item>
+    </integer-array>
+
+    <integer-array name="fifth_floor_no_path">
+        <item>@drawable/fifth_floor_521_no_path</item>
+        <item>@drawable/fifth_floor_522_no_path</item>
+        <item>@drawable/fifth_floor_524_no_path</item>
+        <item>@drawable/fifth_floor_525_no_path</item>
+        <item>@drawable/fifth_floor_526_no_path</item>
+        <item>@drawable/fifth_floor_527_no_path</item>
+        <item>@drawable/fifth_floor_elevator_no_path</item>
+        <item>@drawable/fifth_floor_female_cr_no_path</item>
+        <item>@drawable/fifth_floor_male_cr_no_path</item>
+        <item>@drawable/fifth_floor_pwd_cr_no_path</item>
     </integer-array>
 
 </resources>

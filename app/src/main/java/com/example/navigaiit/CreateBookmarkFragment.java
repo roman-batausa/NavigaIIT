@@ -158,8 +158,8 @@ public class CreateBookmarkFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 try {
+
                     bookmarkModel = new BookmarkModel(-1, building_AutoCTV.getText().toString()
                             , floor_AutoCTV.getText().toString()
                             , room_AutoCTV.getText().toString()
@@ -172,8 +172,9 @@ public class CreateBookmarkFragment extends Fragment {
 
                 databaseHelper = new DatabaseHelper(requireContext());
                 boolean success = databaseHelper.addBookmark(bookmarkModel);
-
                 //Toast.makeText(requireContext(), "Success: " + success, Toast.LENGTH_SHORT).show();
+                //getFragmentManager().popBackStack();
+
                 getActivity()
                         .getSupportFragmentManager()
                         .beginTransaction()
